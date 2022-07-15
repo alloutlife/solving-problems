@@ -11,10 +11,10 @@ public:
     {
         std::string::difference_type max_length{ 0 };
 
-        // Working set of chars appearing in the sequence.
+        // Define a working set of chars appearing in the sequence.
         // The easiest and most handy storage type is `std::set` or `std::unordered_set`
         //
-        // Although in order to speed up the code, we use a raw array of bools for each of
+        // Although in order to optimize the code, we use a raw array of bools for each of
         // 256 possible chars. `true` means the char occurs in the sequence.
         bool char_already_used[ 256 ];
         std::fill( std::begin( char_already_used ), std::end( char_already_used ), false );
